@@ -75,7 +75,9 @@ export default function ProductClient({ product, room }: { product: Product, roo
                 key={displayImage}
                 src={displayImage} 
                 alt={product.name}
-                className="absolute inset-0 w-full h-full object-cover animate-in fade-in duration-300"
+                className="absolute inset-0 w-full h-full object-cover animate-in fade-in duration-300 select-none pointer-events-none"
+                draggable={false}
+                onContextMenu={(e) => e.preventDefault()}
               />
             </div>
             
@@ -93,7 +95,9 @@ export default function ProductClient({ product, room }: { product: Product, roo
                     <img
                       src={img}
                       alt={`${product.name} variation ${idx + 1}`}
-                      className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                      className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
+                      draggable={false}
+                      onContextMenu={(e) => e.preventDefault()}
                     />
                   </button>
                 ))}
