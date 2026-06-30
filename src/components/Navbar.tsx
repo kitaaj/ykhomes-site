@@ -117,16 +117,9 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={() => setIsOpen(false)}
-              className="text-sm tracking-wide text-[var(--text-dark)]"
-            >
-              Contact
-            </Link>
-            <Link
-              href="/contact"
-              onClick={() => setIsOpen(false)}
               className="inline-block text-center px-6 py-3 bg-[var(--primary-dark)] text-[var(--text-light)] text-xs tracking-[0.15em] uppercase"
             >
-              Get Started
+              Contact
             </Link>
           </div>
         </div>

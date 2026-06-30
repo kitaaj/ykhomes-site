@@ -5,9 +5,9 @@ export default function Footer() {
   return (
     <footer className="bg-[var(--primary-dark)] text-[var(--text-light)]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-8 gap-y-12 md:gap-12">
           {/* Brand */}
-          <div className="md:col-span-1">
+          <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-1 mb-4">
               <span className="font-[var(--font-heading)] text-2xl font-light tracking-[0.2em]">
                 Y
@@ -77,14 +77,6 @@ export default function Footer() {
                   className="text-sm text-white/70 hover:text-[var(--accent)] transition-colors"
                 >
                   Asili Collection
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/collections/nala"
-                  className="text-sm text-white/70 hover:text-[var(--accent)] transition-colors"
-                >
-                  Nala Collection
                 </Link>
               </li>
             </ul>
