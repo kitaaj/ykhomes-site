@@ -14,21 +14,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Map dynamic routes
   const productUrls = products.map((product: any) => ({
     url: `${baseUrl}/product/${product.slug}`,
-    lastModified: new Date(product._updatedAt),
+    lastModified: product._updatedAt ? new Date(product._updatedAt) : new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }))
 
   const collectionUrls = collections.map((collection: any) => ({
     url: `${baseUrl}/collections/${collection.slug}`,
-    lastModified: new Date(collection._updatedAt),
+    lastModified: collection._updatedAt ? new Date(collection._updatedAt) : new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.9,
   }))
 
   const roomUrls = rooms.map((room: any) => ({
     url: `${baseUrl}/catalog/${room.slug}`,
-    lastModified: new Date(room._updatedAt),
+    lastModified: room._updatedAt ? new Date(room._updatedAt) : new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }))
